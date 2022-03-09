@@ -1,0 +1,22 @@
+{
+  "name": "cyberpet",
+  "version": "1.0.0",
+  "description": "Cyberpet game, coded for week4 of the master course with Code Nation.",
+  "main": "cyberpet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMarsh-git/cyberPetChallenge.git"
+  },
+  "author": "Samuel Marsh, Farzad Ardehaei, Michael Clemson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SMarsh-git/cyberPetChallenge/issues"
+  },
+  "homepage": "https://github.com/SMarsh-git/cyberPetChallenge#readme",
+  "dependencies": {
+    "inquirer": "^8.2.1"
+  }
+}
