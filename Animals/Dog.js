@@ -5,9 +5,6 @@ class Dog extends Animal {
     // Dog specifics here 
 }
 
-
-
-
 module.exports = {
     Dog,
   };

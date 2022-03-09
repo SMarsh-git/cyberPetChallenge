@@ -26,6 +26,4 @@ class Animal{
     play() {
         this._boredom--;
     }
-    
-
 }
