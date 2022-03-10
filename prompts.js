@@ -43,9 +43,9 @@ const prompts = {
       },
     ],
   },
-  feeding: {
+  catFeed: {
     type:`list`,
-    name:`action`,
+    name:`feed`,
     message:`What do you want to feed your pet?`,
     choices: [
       {
@@ -65,9 +65,9 @@ const prompts = {
       },
     ],
   },
-  drinking: {
+  catDrink: {
     type:`list`,
-    name:`action`,
+    name:`drink`,
     message:`How much water do you want to give your pet?`,
     choices: [
       {
@@ -104,6 +104,45 @@ const prompts = {
       },
     ],
   },
+  dogFeed: {
+    type:`list`,
+    name:`feed`,
+    message:`What do you want to feed your pet?`,
+    choices: [
+      {
+        key: 'a',
+        name: 'Feed your pet a can of wet food.',
+        value: 'wetFood',
+      },
+      {
+        key: 'b',
+        name: 'Feed your pet some biscuits.',
+        value: 'biscuits',
+      },
+      {
+        key: 'c',
+        name: 'Feed your pet some treats.',
+        value: 'treats',
+      },
+    ],
+  },
+  dogDrink: {
+    type:`list`,
+    name:`drink`,
+    message:`How much water do you want to give your pet?`,
+    choices: [
+      {
+        key: 'a',
+        name: 'Give your pet a whole dish of water.',
+        value: 'fullDish',
+      },
+      {
+        key: 'b',
+        name: 'Give your pet half a dish of water.',
+        value: 'halfDish',
+      },
+    ],
+  },
   dogPlay: {
     type: 'list',
     name: 'play',
@@ -123,6 +162,45 @@ const prompts = {
         key: 'c',
         name: 'A shiny chewy ball',
         value: 'ball',
+      },
+    ],
+  },
+  rabbitFeed: {
+    type:`list`,
+    name:`feed`,
+    message:`What do you want to feed your pet?`,
+    choices: [
+      {
+        key: 'a',
+        name: 'Carrots.',
+        value: 'carrot',
+      },
+      {
+        key: 'b',
+        name: 'Feed your pet some biscuits.',
+        value: 'biscuits',
+      },
+      {
+        key: 'c',
+        name: 'Feed your pet some treats.',
+        value: 'treats',
+      },
+    ],
+  },
+  rabbitDrink: {
+    type:`list`,
+    name:`drink`,
+    message:`How much water do you want to give your pet?`,
+    choices: [
+      {
+        key: 'a',
+        name: 'Give your pet a whole dish of water.',
+        value: 'fullDish',
+      },
+      {
+        key: 'b',
+        name: 'Give your pet half a dish of water.',
+        value: 'halfDish',
       },
     ],
   },

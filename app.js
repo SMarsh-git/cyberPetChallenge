@@ -1,6 +1,6 @@
 const inquirer = require(`inquirer`);
 const {prompts} = require (`./prompts`);
-const { Animal } = require("./cyberpet");
+const {Animal} = require("./cyberpet");
 const {Cat} = require (`./Animals/Cat`);
 const {Dog} = require (`./Animals/Dog`);
 const {Rabbit} = require (`./Animals/Rabbit`);
@@ -28,8 +28,8 @@ async function yourAction() {
 
     const {action} = await inquirer.prompt(prompts.action);
     if (action === `play`) await myPet.play();
-    if (action === `drink`) await myPet.drinking();
-    if (action === `feed`) await myPet.feeding();
+    if (action === `drink`) await myPet.drink();
+    if (action === `feed`) await myPet.feed();
 
 
     yourAction();

@@ -9,9 +9,9 @@ class Animal{
 
     constructor(name){
         this._name = name;
-        this._hunger = 10;
-        this._thirst = 10;
-        this._boredom = 10;
+        this._hunger = 30;
+        this._thirst = 30;
+        this._boredom = 30;
     }
 
     get name() {
@@ -48,24 +48,24 @@ class Animal{
         }
     }
 
-    boredom() {
+    boredom(num) {
         this._boredom += num;
-        return this._boredom;
+        this._hunger -= (num/2);
+        this._thirst -= (num/2); 
     }
 
-    async feeding() {
-        const {food} = await inquirer.prompt(prompts.feeding);
-        if (food === "wetFood") this.hunger(+2);
-        if (food === "biscuits") this.hunger(+2);
-        if (food === "treats") this.hunger(+2);
-
-        return this._hunger;
-    }
-
-    hunger() {
+    hunger(num) {
         this._hunger += num;
+        this._thirst -= (num/2);
+        this._boredom -= (num/2);
     }
 
+    thirst(num) {
+        this._thirst += num;
+        this._hunger -= (num/2);
+        this._boredom -= (num/2);
+    }
+    
     async drinking() {
         const {drink} = await inquirer.prompt(prompts.drinking);
         if (drink === "fullDish") this.thirst(+2);
@@ -74,7 +74,6 @@ class Animal{
         return this._thirst;
     }
 }
-
 
 module.exports = {
     Animal,
