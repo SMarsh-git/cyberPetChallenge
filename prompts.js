@@ -67,8 +67,8 @@ const Prompts = {
       },
       {
         key: 'c',
-        name: 'Feed your pet some plants/carrots.',
-        value: 'plants',
+        name: 'Feed your pet some treats.',
+        value: 'treats',
       },
     ],
   },

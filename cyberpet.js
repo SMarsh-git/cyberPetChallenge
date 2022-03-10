@@ -1,9 +1,12 @@
+
+
 class Animal{
     constructor(name){
         this._name = name;
         this._hunger = 10;
         this._thirst = 10;
         this._boredom = 10;
+        this._isAlive = true;
     }
     get name() {
         return this._name;
@@ -27,3 +30,9 @@ class Animal{
         this._boredom--;
     }
 }
+
+
+module.exports = {
+    Animal,
+  };
+  
