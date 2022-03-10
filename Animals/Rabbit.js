@@ -1,3 +1,7 @@
+const inquirer = require("inquirer");
+const { Animal } = require("../cyberpet");
+const {prompts} = require (`../prompts`);
+
 class Rabbit extends Animal {
     constructor(name) {
       super(name);
@@ -6,8 +10,8 @@ class Rabbit extends Animal {
     async play() {
       const {play} = await inquirer.prompt(prompts.rabbitPlay);
 
-      if (play === "looRoll") this.boredom();
-      if (play === "hayBall") this.boredom();
+      if (play === "looRoll") this.boredom(+2);
+      if (play === "hayBall") this.boredom(+2);
     }
 }
 

@@ -1,6 +1,4 @@
-const inquirer = require("inquirer")
-
-const Prompts = {
+const prompts = {
   typeOfPet: {
     type: 'list',
     name: 'typeOfPet',
@@ -42,11 +40,6 @@ const Prompts = {
         key: 'c',
         name: 'Play with your pet.',
         value: 'play',
-      },
-      {
-        key: 'd',
-        name: "View your pet's stats.",
-        value: 'stats',
       },
     ],
   },
@@ -152,13 +145,6 @@ const Prompts = {
   },
 }
 
-async function start() {
-  const {typeOfPet} = await inquirer.prompt(Prompts.typeOfPet);
-  const {action} = await inquirer.prompt(Prompts.action);
-  const {feeding} = await inquirer.prompt(Prompts.feeding);
-  const {drinking} = await inquirer.prompt(Prompts.drinking);
-  const {catPlay} = await inquirer.prompt(Prompts.catPlay);
-  const {dogPlay} = await inquirer.prompt(Prompts.dogPlay);
-  const {rabbitPlay} = await inquirer.prompt(Prompts.rabbitPlay);
-}
-start()
+module.exports = {
+  prompts,
+};
